@@ -1,84 +1,81 @@
 .container__cd {
+    @include flex (column,flex-start,center);
     flex: 0 0 34.2rem;
     min-height: 34.2rem;
-    max-height: 34.2rem;
-    display: flex;
-    flex-direction: column;
-    margin-top: 2rem;
-    align-items: center;
+    height: 34.2rem;
+    margin-top: 5rem;
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
-
+   
     &:hover &__side {
         transform: rotateY(-180deg);
     }
     &:hover &__side--back {
         transform: rotateY(0);
     }
-
+    &:hover &__side--back p::before {
+        width: 100%;
+    }
     &:not(:last-child) {
         margin-right: 2rem;
     }
     &__side {
+        @include absolute (0,0,0,0);
         padding: 2rem;
         height: 100%;
         width: 100%;
         transition: all 0.9s;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
         backface-visibility: hidden;
         &--back {
             transform: rotateY(180deg);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            @include flex(column,center,center);
             background-color: var(--color-light-purple);
             font-weight: 600;
             background: var(--color-gray-medium);
-            
             transform-style: preserve-3d;
             & p {
                 margin-bottom: 2rem;
                 font-size: 1.5rem;
-                transform: translateZ(3rem);
-                backface-visibility: hidden;
+                font-weight: 700;
+                @include animation-property(3rem);
+                position: relative;
+                &::before {
+                    content: "";
+                    @include absolute (null,null,-50%,null);
+                    @include animation-property(3rem);
+                    background-color: var(--color-red);
+                    color: var(--color-red);
+                    width: 0%;
+                    font-weight: bold;
+                    height: 0.2rem;
+                    transition-delay: 0.3s;
+                    transition-duration: 0.5s;
+                }
             }
         }
         &--front {
-            max-width: 100%;
-            max-height: 100%;
-            background:  var(--color-white);
-            transform-style: preserve-3d;
-            backface-visibility: hidden;
+            @extend %full-div;
+            @extend %animation-common;
+            background: var(--color-white);
         }
     }
     &-img {
-        width: 100%;
-        height: 100%;
+        @extend %full-div;
         position: relative;
         & img {
-            width: 100%;
-            height: 100%;
+            @extend %full-div;
+            @include animation-property(5rem);
             object-fit: contain;
-            transform: translateZ(5rem);
         }
     }
     &-text {
+        @include flex(column,center,center);
+        @include animation-property(10rem);
         width: 80%;
         height: 80%;
         border: 5px solid var(--color-red);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        transform: translateZ(10rem);
-        backface-visibility: hidden;
-        background-color: rgba($color-black,.3);
-        transform-style: preserve-3d;
+        background-color: rgba($color-black, 0.3);
+        color: var(--color-white);
     }
 }

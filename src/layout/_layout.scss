@@ -13,13 +13,13 @@ html{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-y: hidden;
 }
 .container-content {
+    @include flex (row,center,flex-start);
     max-width: 100%;
     flex: 1;
-    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     padding:0 10rem;
     background-color: var(--color-gray-dark);
     color: #fff;
