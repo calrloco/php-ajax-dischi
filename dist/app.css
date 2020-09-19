@@ -1,0 +1,125 @@
+:root {
+  --color-green: #5cbdb9;
+  --color-tiny-greeny: #ebf6f5;
+  --color-pinky: #fbe3e8;
+  --color-white: #ffff;
+  --color-dark-purple: #0c0032;
+  --color-medium-purple: #240090;
+  --color-light-purple: #3500d3;
+  --color-gray: #282828;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+  max-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-content {
+  max-width: 100%;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 10rem;
+  background-color: var(--color-gray);
+  color: #fff;
+}
+
+.container__cd {
+  flex: 0 0 34.2rem;
+  min-height: 34.2rem;
+  max-height: 34.2rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  align-items: center;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+}
+
+.container__cd:hover .container__cd__side {
+  transform: rotateY(180deg);
+}
+
+.container__cd:hover .container__cd__side--back {
+  transform: rotateY(0);
+}
+
+.container__cd:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.container__cd__side {
+  padding: 2rem;
+  height: 100%;
+  width: 100%;
+  transition: all 0.8s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.container__cd__side--back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-light-purple);
+  font-weight: 600;
+}
+
+.container__cd__side--back p {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.container__cd__side--front {
+  max-width: 100%;
+  max-height: 100%;
+  background-color: var(--color-medium-purple);
+}
+
+.container__cd-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.container__cd-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.nav {
+  position: -webkit-sticky;
+  position: sticky;
+  min-height: 8rem;
+  width: 100%;
+  background-color: var(--color-dark-purple);
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
