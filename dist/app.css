@@ -1,5 +1,6 @@
 .container__cd-text,
 .container__cd-img img,
+.container__cd-img,
 .container__cd__side--front,
 .container__cd__side--back p::before,
 .container__cd__side--back p {
@@ -142,6 +143,7 @@ html {
 
 .container__cd-img {
   position: relative;
+  transform: translateZ(5rem);
 }
 
 .container__cd-img img {

@@ -63,6 +63,8 @@
     &-img {
         @extend %full-div;
         position: relative;
+        @extend %full-div;
+            @include animation-property(5rem);
         & img {
             @extend %full-div;
             @include animation-property(5rem);
