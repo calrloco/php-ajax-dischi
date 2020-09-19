@@ -28,7 +28,7 @@ $database = [
             'title' => 'Brave new World',
             'author' => 'Iron Maiden',
             'year' => 2000,
-            'poster' => 'https://i.ebayimg.com/images/g/1GwAAOSwFytaKr7l/s-l300.jpg'
+            'poster' => 'https://i.ibb.co/Gc00MFJ/81b-Jkv-Ve-Oo-L-AC-SL1500.jpg'
         ],
         [
             'title' => 'One more car, one more rider',
