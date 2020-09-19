@@ -69,6 +69,7 @@ html {
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
+  cursor: pointer;
 }
 
 .container__cd:hover .container__cd__side {

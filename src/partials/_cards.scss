@@ -7,7 +7,7 @@
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
-   
+    cursor: pointer;
     &:hover &__side {
         transform: rotateY(-180deg);
     }
