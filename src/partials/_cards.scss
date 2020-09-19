@@ -11,7 +11,7 @@
     position: relative;
 
     &:hover &__side {
-        transform: rotateY(180deg);
+        transform: rotateY(-180deg);
     }
     &:hover &__side--back {
         transform: rotateY(0);
@@ -39,20 +39,20 @@
             align-items: center;
             background-color: var(--color-light-purple);
             font-weight: 600;
-            background: rgb(2, 0, 36);
-            background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 50%, rgba(0, 212, 255, 1) 50%);
+            background: var(--color-gray-medium);
+            
             transform-style: preserve-3d;
             & p {
                 margin-bottom: 2rem;
                 font-size: 1.5rem;
-                transform: translateZ(10rem);
+                transform: translateZ(3rem);
                 backface-visibility: hidden;
             }
         }
         &--front {
             max-width: 100%;
             max-height: 100%;
-            background: linear-gradient(135deg, rgba(0, 212, 255, 1) 50%, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 50%);
+            background:  var(--color-white);
             transform-style: preserve-3d;
             backface-visibility: hidden;
         }
@@ -71,12 +71,14 @@
     &-text {
         width: 80%;
         height: 80%;
-        border: 5px solid yellowgreen;
+        border: 5px solid var(--color-red);
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         transform: translateZ(10rem);
         backface-visibility: hidden;
+        background-color: rgba($color-black,.3);
+        transform-style: preserve-3d;
     }
 }

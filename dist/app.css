@@ -1,12 +1,9 @@
 :root {
-  --color-green: #5cbdb9;
-  --color-tiny-greeny: #ebf6f5;
-  --color-pinky: #fbe3e8;
-  --color-white: #ffff;
-  --color-dark-purple: #0c0032;
-  --color-medium-purple: #240090;
-  --color-light-purple: #3500d3;
-  --color-gray: #282828;
+  --color-white: #fffffa;
+  --color-black: #000103;
+  --color-gray-dark: #333138;
+  --color-gray-medium: #515052;
+  --color-red: #ff312e;
 }
 
 * {
@@ -35,7 +32,7 @@ html {
   flex-wrap: wrap;
   justify-content: center;
   padding: 0 10rem;
-  background-color: var(--color-gray);
+  background-color: var(--color-gray-dark);
   color: #fff;
 }
 
@@ -53,7 +50,7 @@ html {
 }
 
 .container__cd:hover .container__cd__side {
-  transform: rotateY(180deg);
+  transform: rotateY(-180deg);
 }
 
 .container__cd:hover .container__cd__side--back {
@@ -86,15 +83,14 @@ html {
   align-items: center;
   background-color: var(--color-light-purple);
   font-weight: 600;
-  background: #020024;
-  background: linear-gradient(135deg, #020024 0%, #090979 50%, #00d4ff 50%);
+  background: var(--color-gray-medium);
   transform-style: preserve-3d;
 }
 
 .container__cd__side--back p {
   margin-bottom: 2rem;
   font-size: 1.5rem;
-  transform: translateZ(10rem);
+  transform: translateZ(3rem);
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
@@ -102,7 +98,7 @@ html {
 .container__cd__side--front {
   max-width: 100%;
   max-height: 100%;
-  background: linear-gradient(135deg, #00d4ff 50%, #020024 0%, #090979 50%);
+  background: var(--color-white);
   transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -125,7 +121,7 @@ html {
 .container__cd-text {
   width: 80%;
   height: 80%;
-  border: 5px solid yellowgreen;
+  border: 5px solid var(--color-red);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -133,6 +129,8 @@ html {
   transform: translateZ(10rem);
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+  background-color: rgba(0, 1, 3, 0.3);
+  transform-style: preserve-3d;
 }
 
 .nav {
@@ -140,7 +138,7 @@ html {
   position: sticky;
   min-height: 8rem;
   width: 100%;
-  background-color: var(--color-dark-purple);
+  background-color: var(--color-black);
   top: 0;
   left: 0;
   z-index: 20;
