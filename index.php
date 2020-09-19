@@ -3,6 +3,7 @@ include __DIR__ . "/database/db.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@ include __DIR__ . "/database/db.php";
     <link rel="stylesheet" href="dist/app.css">
     <title>Cd</title>
 </head>
+
 <body>
     <div class="wrapper">
         <div class="nav"></div>
@@ -22,14 +24,16 @@ include __DIR__ . "/database/db.php";
                         </div>
                     </div>
                     <div class="container__cd__side container__cd__side--back">
-                        <div class="container__cd-title">
-                            <p class="container__cd-title-text"><?php echo $key['title'] ?></p>
-                        </div>
-                        <div class="container__cd-artist">
-                            <p class="container__cd-artist-text"><?php echo  $key['author'] ?></p>
-                        </div>
-                        <div class="container__cd-year">
-                            <p class="container__cd-year-text"><?php echo $key['year'] ?></p>
+                        <div class="container__cd-text">
+                            <div class="container__cd-title">
+                                <p class="container__cd-title-text"><?php echo $key['title'] ?></p>
+                            </div>
+                            <div class="container__cd-artist">
+                                <p class="container__cd-artist-text"><?php echo  $key['author'] ?></p>
+                            </div>
+                            <div class="container__cd-year">
+                                <p class="container__cd-year-text"><?php echo $key['year'] ?></p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -37,4 +41,5 @@ include __DIR__ . "/database/db.php";
         </div>
     </div>
 </body>
+
 </html>

@@ -1,7 +1,7 @@
 .container__cd {
     flex: 0 0 34.2rem;
     min-height: 34.2rem;
-    max-height:34.2rem;
+    max-height: 34.2rem;
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
@@ -9,7 +9,7 @@
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
-    
+
     &:hover &__side {
         transform: rotateY(180deg);
     }
@@ -21,10 +21,10 @@
         margin-right: 2rem;
     }
     &__side {
-        padding:2rem;
+        padding: 2rem;
         height: 100%;
         width: 100%;
-        transition: all 0.8s;
+        transition: all 0.9s;
         position: absolute;
         top: 0;
         left: 0;
@@ -34,20 +34,27 @@
         &--back {
             transform: rotateY(180deg);
             display: flex;
-            flex-direction:column;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-             background-color: var(--color-light-purple);
-             font-weight: 600;
+            background-color: var(--color-light-purple);
+            font-weight: 600;
+            background: rgb(2, 0, 36);
+            background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 50%, rgba(0, 212, 255, 1) 50%);
+            transform-style: preserve-3d;
             & p {
                 margin-bottom: 2rem;
-                font-size:1.5rem;
+                font-size: 1.5rem;
+                transform: translateZ(10rem);
+                backface-visibility: hidden;
             }
         }
         &--front {
             max-width: 100%;
             max-height: 100%;
-            background-color: var(--color-medium-purple);
+            background: linear-gradient(135deg, rgba(0, 212, 255, 1) 50%, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 50%);
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
         }
     }
     &-img {
@@ -58,8 +65,18 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
+            transform: translateZ(5rem);
         }
-        
     }
-   
+    &-text {
+        width: 80%;
+        height: 80%;
+        border: 5px solid yellowgreen;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transform: translateZ(10rem);
+        backface-visibility: hidden;
+    }
 }
