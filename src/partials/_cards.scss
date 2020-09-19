@@ -1,11 +1,10 @@
 .container__cd {
-    @include flex (column,flex-start,center);
+    @include flex(column, flex-start, center);
     flex: 0 0 34.2rem;
     min-height: 34.2rem;
     height: 34.2rem;
     margin-top: $margin-top-card;
-    perspective: 150rem;
-    -moz-perspective: 150rem;
+    @extend %animation-perspective;
     position: relative;
     cursor: pointer;
     &:hover &__side {
@@ -21,28 +20,34 @@
         margin-right: 2rem;
     }
     &__side {
-        @include absolute (0,0,0,0);
+        @include absolute(0, 0, 0, 0);
         padding: 2rem;
         height: 100%;
         width: 100%;
-        transition: all 0.9s;
+        transition: all 0.8s;
         backface-visibility: hidden;
+        @extend %animation-common;
         &--back {
             transform: rotateY(180deg);
-            @include flex(column,center,center);
+            @include flex(column, center, center);
             background-color: var(--color-light-purple);
             font-weight: 600;
             background: var(--color-gray-medium);
-            transform-style: preserve-3d;
+            @extend %animation-common;
             & p {
                 margin-bottom: 2rem;
                 font-size: 1.5rem;
                 font-weight: 700;
                 @include animation-property(3rem);
                 position: relative;
+                -webkit-font-smoothing: antialiased;
+                @media screen and (-webkit-min-device-pixel-ratio: 0) {
+                    // solo mac
+                    -moz-osx-font-smoothing: grayscale;
+                }
                 &::before {
                     content: "";
-                    @include absolute (null,null,-50%,null);
+                    @include absolute(null, null, -50%, null);
                     @include animation-property(3rem);
                     background-color: var(--color-red);
                     color: var(--color-red);
@@ -64,7 +69,7 @@
         @extend %full-div;
         position: relative;
         @extend %full-div;
-            @include animation-property(5rem);
+        @include animation-property(5rem);
         & img {
             @extend %full-div;
             @include animation-property(5rem);
@@ -72,12 +77,13 @@
         }
     }
     &-text {
-        @include flex(column,center,center);
+        @include flex(column, center, center);
         @include animation-property(10rem);
-        width: 80%;
-        height: 80%;
+        width: 90%;
+        height: 90%;
         border: 5px solid var(--color-red);
         background-color: rgba($color-black, 0.3);
         color: var(--color-white);
+        padding:1rem;
     }
 }
