@@ -20,23 +20,25 @@
             position: relative;
             color:var(--color-gray-medium);
             transition: all .2s;
+            flex: .1;
+            
             &::before {
-                content:'';
-                width:3px;
-                height: 100%;
-                position: absolute;
-                left: -10%;
-                top: 0;
-                background: var(--color-red);
-                transition: all .2s;
-                z-index: -1;
+                @extend %pseudo-nav;
+            }
+            &::after {
+                @extend %pseudo-nav;
             }
             &:hover{
                 color: #fff;
             }
+            &:active{
+                transform:scale(0.9);
+            }
             &:hover.nav__artist-name::before{
-                width: 120%;
-                z-index: -1;
+                width: 100%;
+            }
+            &:hover.nav__artist-name::after{
+                width: 100%;
             }
         }
     }

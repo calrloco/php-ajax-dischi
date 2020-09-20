@@ -1,17 +1,18 @@
 @mixin animation-property($translatez) {
-    transform:translateZ($translatez);
+    transform: translateZ($translatez);
     @extend %animation-common;
 }
-@mixin flex($direction,$justify-content,$align-items){
-    display:flex;
-    justify-content:$justify-content;
-    flex-direction:$direction;
+@mixin flex($direction, $justify-content, $align-items) {
+    display: flex;
+    justify-content: $justify-content;
+    flex-direction: $direction;
     align-items: $align-items;
 }
-@mixin absolute ($top,$right,$bottom,$left){
-   position:absolute;
-   top: $top;
-   right: $right;
-   bottom: $bottom;
-   left: $left;
+@mixin absolute($top, $right, $bottom, $left) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
 }
+

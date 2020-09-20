@@ -15,7 +15,7 @@
     <div class="wrapper">
         <div class="nav">
             <ul class="nav__artist">
-                <li class="nav__artist-name see-all">Tutti</li>
+                <li class="nav__artist-name see-all">Tutti gli artisti</li>
             </ul>
         </div>
         <div class="container-content">
