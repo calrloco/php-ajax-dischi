@@ -10977,7 +10977,8 @@ return jQuery;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"); /// chiamata ajax
+var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"); ////////jquery e stato installato con npm////////////
+/// chiamata ajax
 
 
 $(document).ready(function () {

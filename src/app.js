@@ -1,4 +1,5 @@
 var $ = require("jquery");
+////////jquery e stato installato con npm////////////
 /// chiamata ajax
 $(document).ready(function() {
   $.ajax({
