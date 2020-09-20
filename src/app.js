@@ -62,4 +62,4 @@ function compileNav(risp) {
     $(".nav__artist").append(htmlContext);
   }
 }
-//////////////
+

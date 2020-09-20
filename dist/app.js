@@ -11045,7 +11045,7 @@ function compileNav(risp) {
     var htmlContext = templateAuthor(context);
     $(".nav__artist").append(htmlContext);
   }
-} //////////////
+}
 
 /***/ }),
 
