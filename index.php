@@ -7,14 +7,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dist/app.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
-    <title>Cd</title>
+    <title>Dischi</title>
+    <link rel="shortcut icon" type="image/svg" href="https://svgshare.com/i/Pqd.svg'">
 </head>
 
 <body>
     <div class="wrapper">
         <div class="nav">
             <ul class="nav__artist">
-            <li class="nav__artist-name see-all">Tutti</li>
+                <li class="nav__artist-name see-all">Tutti</li>
             </ul>
         </div>
         <div class="container-content">
