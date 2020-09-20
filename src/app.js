@@ -15,14 +15,15 @@ $(document).ready(function() {
   //// cerca per autore
   $(document).on("click", ".nav__artist-name", function() {
     var artist = $(this).html();
-    console.log(artist);
     // se non e il tasto seleziona tutti faccio partire la ricerca artista
     if ($(this).hasClass("see-all") == false) {
       $(".container__cd").each(function() {
         var artistContainer = $(this).data("artist");
         if (artistContainer != artist) {
           $(this).hide();
-        } 
+        }else{
+          $(this).show();
+        }
       });
     } else {
       $(".container__cd").show();

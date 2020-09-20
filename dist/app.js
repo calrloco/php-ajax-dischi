@@ -10994,8 +10994,7 @@ $(document).ready(function () {
   }); //// cerca per autore
 
   $(document).on("click", ".nav__artist-name", function () {
-    var artist = $(this).html();
-    console.log(artist); // se non e il tasto seleziona tutti faccio partire la ricerca artista
+    var artist = $(this).html(); // se non e il tasto seleziona tutti faccio partire la ricerca artista
 
     if ($(this).hasClass("see-all") == false) {
       $(".container__cd").each(function () {
@@ -11003,7 +11002,7 @@ $(document).ready(function () {
 
         if (artistContainer != artist) {
           $(this).hide();
-        } else if (artistContainer == artist) {
+        } else {
           $(this).show();
         }
       });
