@@ -22,9 +22,7 @@ $(document).ready(function() {
         var artistContainer = $(this).data("artist");
         if (artistContainer != artist) {
           $(this).hide();
-        } else if (artistContainer == artist) {
-          $(this).show();
-        }
+        } 
       });
     } else {
       $(".container__cd").show();
