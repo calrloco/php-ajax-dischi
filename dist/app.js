@@ -10990,7 +10990,8 @@ $(document).ready(function () {
       compileNav(data);
     },
     error: function error() {
-      alert("error");
+      $('.nav').hide();
+      $('.error__page').show();
     }
   }); //// cerca per autore
 

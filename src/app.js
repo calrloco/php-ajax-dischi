@@ -10,7 +10,8 @@ $(document).ready(function() {
       compileNav(data);
     },
     error: function() {
-      alert("error");
+      $('.nav').hide();
+      $('.error__page').show();
     },
   });
   //// cerca per autore
@@ -63,4 +64,5 @@ function compileNav(risp) {
     $(".nav__artist").append(htmlContext);
   }
 }
+
 

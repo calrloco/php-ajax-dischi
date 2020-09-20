@@ -70,6 +70,12 @@ html {
   color: #fff;
 }
 
+.error__page {
+  display: none;
+  justify-self: center;
+  align-self: center;
+}
+
 .container__cd {
   display: flex;
   justify-content: flex-start;

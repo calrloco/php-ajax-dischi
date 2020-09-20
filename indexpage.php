@@ -17,7 +17,9 @@
             <li class="nav__artist-name see-all">Tutti</li>
             </ul>
         </div>
-        <div class="container-content"></div>
+        <div class="container-content">
+            <img src="https://svgshare.com/i/Pp3.svg" alt="" class="error__page">
+        </div>
     </div>
     <script id="container-cards" type="text/x-handlebars-template">
         <div class="container__cd" data-artist="{{author}}">
