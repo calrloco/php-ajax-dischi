@@ -41,6 +41,7 @@
                 @include animation-property(3rem);
                 position: relative;
                 -webkit-font-smoothing: antialiased;
+                text-align: center;
                 @media screen and (-webkit-min-device-pixel-ratio: 0) {
                     // solo mac
                     -moz-osx-font-smoothing: grayscale;

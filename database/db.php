@@ -37,5 +37,5 @@ $database = [
             'poster' => 'https://images-na.ssl-images-amazon.com/images/I/81MDAIdh78L._SY355_.jpg'
         ]
     ];
-    header('Content_Type: application/json');
-    
+    header('Content-Type: application/json');
+    echo json_encode($database);

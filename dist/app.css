@@ -131,6 +131,7 @@ html {
   transform: translateZ(3rem);
   position: relative;
   -webkit-font-smoothing: antialiased;
+  text-align: center;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
@@ -191,5 +192,41 @@ html {
   top: 0;
   left: 0;
   z-index: 20;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.nav__logo {
+  min-height: 200%;
+  padding-left: 20rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.nav__logo img {
+  height: 7rem;
+}
+
+.nav__artist-select {
+  height: 100%;
+  color: #fff;
+  font-size: 2rem;
+  position: relative;
+  display: flex;
+}
+
+.nav__artist-select p {
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.nav__artist-select-list {
+  position: absolute;
+  bottom: 0;
+  background-color: gold;
+  list-style: none;
+  padding: 1rem;
 }
 

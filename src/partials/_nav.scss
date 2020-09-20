@@ -6,4 +6,32 @@
     top: 0;
     left: 0;
     z-index: 20;
+    @include flex(row, flex-start, stretch);
+    &__logo{
+        min-height: 200%;
+        padding-left: 20rem;
+        display: flex;
+        align-items:flex-end;
+        & img{
+            height: 7rem;
+        }
+    }
+    &__artist-select{
+        height: 100%;
+        color: #fff;
+        font-size: 2rem;
+        position: relative;
+        display: flex;
+        & p{
+            cursor: pointer;
+            align-self: flex-end;
+        }
+        &-list{
+            position: absolute;
+            bottom:0;
+            background-color:gold;
+            list-style: none;
+            padding:1rem;
+        }
+    }
 }
