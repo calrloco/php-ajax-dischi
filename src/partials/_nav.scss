@@ -13,7 +13,7 @@
         @include flex(row, space-around, stretch);
         font-size:2rem;
         list-style: none;
-        
+        padding: 1.5rem;
         &-name{
             @include flex(row, center,center);
             cursor: pointer;
@@ -22,20 +22,21 @@
             transition: all .2s;
             &::before {
                 content:'';
-                width: 0;
+                width:3px;
                 height: 100%;
                 position: absolute;
-                left: 0;
+                left: -10%;
                 top: 0;
                 background: var(--color-red);
                 transition: all .2s;
+                z-index: -1;
                 
             }
             &:hover{
                 color: #fff;
             }
             &:hover.nav__artist-name::before{
-                width: 100%;
+                width: 120%;
                 z-index: -1;
             }
         }
