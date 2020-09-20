@@ -7,31 +7,37 @@
     left: 0;
     z-index: 20;
     @include flex(row, flex-start, stretch);
-    &__logo{
-        min-height: 200%;
-        padding-left: 20rem;
-        display: flex;
-        align-items:flex-end;
-        & img{
-            height: 7rem;
-        }
-    }
-    &__artist-select{
-        height: 100%;
+    &__artist {
+        flex: 1;
         color: #fff;
-        font-size: 2rem;
-        position: relative;
-        display: flex;
-        & p{
+        @include flex(row, space-around, stretch);
+        font-size:2rem;
+        list-style: none;
+        
+        &-name{
+            @include flex(row, center,center);
             cursor: pointer;
-            align-self: flex-end;
-        }
-        &-list{
-            position: absolute;
-            bottom:0;
-            background-color:gold;
-            list-style: none;
-            padding:1rem;
+            position: relative;
+            color:var(--color-gray-medium);
+            transition: all .2s;
+            &::before {
+                content:'';
+                width: 0;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                background: var(--color-red);
+                transition: all .2s;
+                
+            }
+            &:hover{
+                color: #fff;
+            }
+            &:hover.nav__artist-name::before{
+                width: 100%;
+                z-index: -1;
+            }
         }
     }
 }

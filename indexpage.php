@@ -13,18 +13,11 @@
 <body>
     <div class="wrapper">
         <div class="nav">
-            <div class="nav__logo">
-                <img src='https://svgshare.com/i/PpK.svg' title='' />
-            </div>
-            <div class="nav__artist-select">
-                <ul class="artist">
-                    <li class="aritst-name">Bon Jovi</li>
-                </ul>
-            </div>
+            <ul class="nav__artist">
+            <li class="nav__artist-name see-all">Tutti</li>
+            </ul>
         </div>
-        <div class="container-content">
-           
-        </div>
+        <div class="container-content"></div>
     </div>
     <script id="container-cards" type="text/x-handlebars-template">
         <div class="container__cd" data-artist="{{author}}">
@@ -48,6 +41,9 @@
                 </div>    
             </div>
         </div>
+    </script>
+    <script id="container-artists" type="text/x-handlebars-template">
+        <li class="nav__artist-name">{{artist}}</li>
     </script>
     <script script src="dist/app.js"></script>
 </body>

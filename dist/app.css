@@ -198,35 +198,45 @@ html {
   align-items: stretch;
 }
 
-.nav__logo {
-  min-height: 200%;
-  padding-left: 20rem;
-  display: flex;
-  align-items: flex-end;
-}
-
-.nav__logo img {
-  height: 7rem;
-}
-
-.nav__artist-select {
-  height: 100%;
+.nav__artist {
+  flex: 1;
   color: #fff;
-  font-size: 2rem;
-  position: relative;
   display: flex;
-}
-
-.nav__artist-select p {
-  cursor: pointer;
-  align-self: flex-end;
-}
-
-.nav__artist-select-list {
-  position: absolute;
-  bottom: 0;
-  background-color: gold;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: stretch;
+  font-size: 2rem;
   list-style: none;
-  padding: 1rem;
+}
+
+.nav__artist-name {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  color: var(--color-gray-medium);
+  transition: all 0.2s;
+}
+
+.nav__artist-name::before {
+  content: "";
+  width: 0;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: var(--color-red);
+  transition: all 0.2s;
+}
+
+.nav__artist-name:hover {
+  color: #fff;
+}
+
+.nav__artist-name:hover.nav__artist-name::before {
+  width: 100%;
+  z-index: -1;
 }
 
