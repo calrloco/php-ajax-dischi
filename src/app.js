@@ -21,7 +21,7 @@ $(document).ready(function() {
         var artistContainer = $(this).data("artist");
         if (artistContainer != artist) {
           $(this).hide();
-        }else{
+        } else {
           $(this).show();
         }
       });
