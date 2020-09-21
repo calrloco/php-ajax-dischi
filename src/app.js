@@ -10,15 +10,32 @@ $(document).ready(function() {
       authorsNav(data);
     },
     error: function() {
-      $('.nav').hide();
-      $('.error__page').show();
+      $(".nav").hide();
+      $(".error__page").show();
     },
   });
+  /// funzione per filtrare per artista
+  function filtraArtista(name) {
+    $(".container-content").empty();
+    $.ajax({
+      url: "http://localhost:8888/lezione-4/cd/database/server.php",
+      method: "GET",
+      data: {
+        author: name,
+      },
+      success: function(data) {
+        compileCards(data);
+      },
+      error: function() {
+        $(".nav").hide();
+        $(".error__page").show();
+      },
+    });
+  }
   //// cerca per autore
   $(document).on("click", ".nav__artist-name", function() {
-    var artist = $(this).html();
-    // se non e il tasto seleziona tutti faccio partire la ricerca artista
-    
+    var artist = $(this).data('value');
+    filtraArtista(artist);
   });
 });
 /// compile cards
@@ -40,24 +57,22 @@ function compileCards(dbAnswer) {
     $(".container-content").append(htmlContext);
   }
 }
-/// compila lista artisti nav senza doppioni 
-function authorsNav (risp){
-      var authorsNav = [];
-      for(var i=0;i<risp.length;i++){
-          if(!authorsNav.includes(risp[i].author)){
-             authorsNav.push(risp[i].author);
-          }  
-      }
-      var source = $("#container-artists").html();
-      var templateAuthor = Handlebars.compile(source);
-      for (var i = 0; i < authorsNav.length; i++) {
-        var author = authorsNav[i];
-        var context = {
-          artist: author,
-        };
-        var htmlContext = templateAuthor(context);
-        $(".nav__artist").append(htmlContext);
-      }
+/// compila lista artisti nav senza doppioni
+function authorsNav(risp) {
+  var authorsNav = [];
+  for (var i = 0; i < risp.length; i++) {
+    if (!authorsNav.includes(risp[i].author)) {
+      authorsNav.push(risp[i].author);
+    }
+  }
+  var source = $("#container-artists").html();
+  var templateAuthor = Handlebars.compile(source);
+  for (var i = 0; i < authorsNav.length; i++) {
+    var author = authorsNav[i];
+    var context = {
+      artist: author,
+    };
+    var htmlContext = templateAuthor(context);
+    $(".nav__artist").append(htmlContext);
+  }
 }
-
-

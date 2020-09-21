@@ -10990,13 +10990,33 @@ $(document).ready(function () {
       authorsNav(data);
     },
     error: function error() {
-      $('.nav').hide();
-      $('.error__page').show();
+      $(".nav").hide();
+      $(".error__page").show();
     }
-  }); //// cerca per autore
+  }); /// funzione per filtrare per artista
+
+  function filtraArtista(name) {
+    $(".container-content").empty();
+    $.ajax({
+      url: "http://localhost:8888/lezione-4/cd/database/server.php",
+      method: "GET",
+      data: {
+        author: name
+      },
+      success: function success(data) {
+        compileCards(data);
+      },
+      error: function error() {
+        $(".nav").hide();
+        $(".error__page").show();
+      }
+    });
+  } //// cerca per autore
+
 
   $(document).on("click", ".nav__artist-name", function () {
-    var artist = $(this).html(); // se non e il tasto seleziona tutti faccio partire la ricerca artista
+    var artist = $(this).data('value');
+    filtraArtista(artist);
   });
 }); /// compile cards
 
@@ -11018,7 +11038,7 @@ function compileCards(dbAnswer) {
     var htmlContext = templateCd(context);
     $(".container-content").append(htmlContext);
   }
-} /// compila lista artisti nav senza doppioni 
+} /// compila lista artisti nav senza doppioni
 
 
 function authorsNav(risp) {

@@ -14,7 +14,7 @@
     <div class="wrapper">
         <nav class="nav">
             <ul class="nav__artist">
-                <li class="nav__artist-name see-all">Tutti gli artisti</li>
+                <li class="nav__artist-name see-all" data-value="">Tutti gli artisti</li>
             </ul>
         </nav>
         <div class="container-content">
@@ -45,7 +45,7 @@
         </div>
     </script>
     <script id="container-artists" type="text/x-handlebars-template">
-        <li class="nav__artist-name">{{artist}}</li>
+        <li class="nav__artist-name" data-value="{{artist}}">{{artist}}</li>
     </script>
     <script script src="dist/app.js"></script>
 </body>
