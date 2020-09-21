@@ -1,6 +1,8 @@
-@import 'abstract/_placeholders.scss';
+@import 'base/base.scss';
+@import 'abstract/placeholders.scss';
 @import 'abstract/mixins.scss';
 @import 'abstract/var.scss';
 @import 'layout/layout.scss';
 @import 'partials/cards.scss';
 @import 'partials/nav.scss';
+@import 'partials/error-page.scss';

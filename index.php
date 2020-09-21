@@ -10,14 +10,13 @@
     <title>Dischi</title>
     <link rel="shortcut icon" type="image/svg" href="https://svgshare.com/i/Pqd.svg'">
 </head>
-
 <body>
     <div class="wrapper">
-        <div class="nav">
+        <nav class="nav">
             <ul class="nav__artist">
                 <li class="nav__artist-name see-all">Tutti gli artisti</li>
             </ul>
-        </div>
+        </nav>
         <div class="container-content">
             <img src="https://svgshare.com/i/Pp3.svg" alt="" class="error__page">
         </div>

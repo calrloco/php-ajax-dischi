@@ -1,3 +1,16 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Montserrat", sans-serif;
+}
+
 .container__cd-text,
 .container__cd-img img,
 .container__cd-img,
@@ -47,19 +60,6 @@
   --color-red: #ff312e;
 }
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-  font-family: "Montserrat", sans-serif;
-}
-
 .wrapper {
   max-width: 100vw;
   min-height: 100vh;
@@ -79,12 +79,6 @@ html {
   padding: 0 10rem;
   background-color: var(--color-gray-dark);
   color: #fff;
-}
-
-.error__page {
-  display: none;
-  justify-self: center;
-  align-self: center;
 }
 
 .container__cd {
@@ -217,7 +211,6 @@ html {
 
 .nav__artist {
   flex: 1;
-  color: #fff;
   display: flex;
   justify-content: space-around;
   flex-direction: row;
@@ -253,5 +246,11 @@ html {
 
 .nav__artist-name:hover.nav__artist-name::after {
   width: 100%;
+}
+
+.error__page {
+  display: none;
+  justify-self: center;
+  align-self: center;
 }
 

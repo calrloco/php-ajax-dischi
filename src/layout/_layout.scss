@@ -1,14 +1,3 @@
-*,
-*::before
-,*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-html{
- font-size: 62.5%;
- font-family: 'Montserrat', sans-serif;
-}
 .wrapper {
     max-width: 100vw;
     min-height: 100vh;
@@ -24,9 +13,4 @@ html{
     padding:$padding-container;
     background-color: var(--color-gray-dark);
     color: #fff;
-}
-.error__page{
-    display:none;
-    justify-self: center;
-    align-self: center;
 }

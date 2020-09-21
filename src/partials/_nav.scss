@@ -9,35 +9,34 @@
     @include flex(row, flex-start, stretch);
     &__artist {
         flex: 1;
-        color: #fff;
         @include flex(row, space-around, stretch);
-        font-size:2rem;
+        font-size: 2rem;
         list-style: none;
         padding: 1.5rem;
-        &-name{
+        &-name {
             @include flex(row, center,center);
             cursor: pointer;
             position: relative;
-            color:var(--color-gray-medium);
-            transition: all .2s;
-            flex: .1;
-            
+            color: var(--color-gray-medium);
+            transition: all 0.2s;
+            flex: 0.1;
+
             &::before {
                 @extend %pseudo-nav;
             }
             &::after {
                 @extend %pseudo-nav;
             }
-            &:hover{
+            &:hover {
                 color: #fff;
             }
-            &:active{
-                transform:scale(0.9);
+            &:active {
+                transform: scale(0.9);
             }
-            &:hover.nav__artist-name::before{
+            &:hover.nav__artist-name::before {
                 width: 100%;
             }
-            &:hover.nav__artist-name::after{
+            &:hover.nav__artist-name::after {
                 width: 100%;
             }
         }
