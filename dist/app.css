@@ -81,7 +81,7 @@ html {
   color: #fff;
 }
 
-@media screen and (max-width: 562px) {
+@media screen and (max-width: 1250px) {
   .container-content {
     padding: 5rem 0;
     display: flex;
@@ -102,6 +102,24 @@ html {
   margin-top: 5rem;
   position: relative;
   cursor: pointer;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+@media screen and (min-width: 2543px) {
+  .container__cd {
+    flex: 0 0 38rem;
+    min-height: 38rem;
+    height: 38rem;
+  }
+}
+
+@media screen and (max-width: 2097px) {
+  .container__cd {
+    flex: 0 0 34.2rem;
+    min-height: 34.2rem;
+    height: 34.2rem;
+  }
 }
 
 @media screen and (max-width: 375px) {
@@ -122,10 +140,6 @@ html {
 
 .container__cd:hover .container__cd__side--back p::before {
   width: 100%;
-}
-
-.container__cd:not(:last-child) {
-  margin-right: 2rem;
 }
 
 .container__cd__side {

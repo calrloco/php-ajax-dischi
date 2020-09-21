@@ -7,6 +7,18 @@
     @extend %animation-perspective;
     position: relative;
     cursor: pointer;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    @include respond(big-desktop){
+        flex: 0 0 38rem;
+        min-height: 38rem;
+        height: 38rem;
+    }
+    @include respond(desktop){
+        flex: 0 0 34.2rem;
+        min-height: 34.2rem;
+        height: 34.2rem;
+    }
     @include respond(mobile){
         flex: 0 0 25rem;
         min-height: 25rem;
@@ -21,9 +33,7 @@
     &:hover &__side--back p::before {
         width: 100%;
     }
-    &:not(:last-child) {
-        margin-right: 2rem;
-    }
+    
     &__side {
         @include absolute(0, 0, 0, 0);
         padding: 2rem;

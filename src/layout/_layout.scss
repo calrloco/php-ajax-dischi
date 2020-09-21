@@ -14,7 +14,7 @@
     background-color: var(--color-gray-dark);
     color: #fff;
 
-    @include respond(tab){
+    @include respond(small-desktop){
         padding:5rem 0;
         @include flex (row,center,center);
     }
