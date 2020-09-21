@@ -3,16 +3,18 @@ var $ = require("jquery");
 /// chiamata ajax
 $(document).ready(function() {
   homepage();
-  
   //// cerca per autore
   $(document).on("click", ".nav__artist-name", function() {
-    var artist = $(this).data('value');
+    var artist = $(this).data("value");
     filtraArtista(artist);
   });
-
+  $(document).on("click", ".burger__menu-data", function() {
+    var artist = $(this).data("value");
+    filtraArtista(artist);
+  });
 });
 //// chimata ajax per l'homepage
-function homepage (){
+function homepage() {
   $.ajax({
     url: "http://localhost:8888/lezione-4/cd/database/server.php",
     method: "GET",

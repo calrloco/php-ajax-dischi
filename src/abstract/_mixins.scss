@@ -15,4 +15,21 @@
     bottom: $bottom;
     left: $left;
 }
-
+//// media query mixin con istruzioni condizionali
+@mixin respond($breakpoint) {
+    @if $breakpoint == mobile {
+        @media screen and (max-width: 375px) {
+            @content;
+        }
+    }
+    @if $breakpoint == tab {
+        @media screen and (max-width: 562px) {
+            @content;
+        }
+    }
+    @if $breakpoint == small-desktop {
+        @media screen and (max-width: 1250px) {
+            @content;
+        }
+    }
+}

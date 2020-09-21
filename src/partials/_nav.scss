@@ -13,6 +13,9 @@
         font-size: 2rem;
         list-style: none;
         padding: 1.5rem;
+        @include respond (small-desktop){
+            @include flex(column,center, center);
+        }
         &-name {
             @include flex(row, center,center);
             cursor: pointer;
@@ -20,7 +23,9 @@
             color: var(--color-gray-medium);
             transition: all 0.2s;
             flex: 0.1;
-
+            @include respond (small-desktop){
+                margin-bottom: 1.5rem;
+            }
             &::before {
                 @extend %pseudo-nav;
             }
@@ -35,9 +40,15 @@
             }
             &:hover.nav__artist-name::before {
                 width: 100%;
+                @include respond(small-desktop){
+                    width: 120%;
+                }
             }
             &:hover.nav__artist-name::after {
                 width: 100%;
+                @include respond (small-desktop){
+                    width: 120%;
+                }
             }
         }
     }
