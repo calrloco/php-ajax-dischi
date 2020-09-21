@@ -13,9 +13,9 @@
     padding:$padding-container;
     background-color: var(--color-gray-dark);
     color: #fff;
-
+    padding-bottom: 5rem;
     @include respond(small-desktop){
-        padding:5rem 0;
+        padding:0 0 5rem 0;
         @include flex (row,center,center);
     }
 }

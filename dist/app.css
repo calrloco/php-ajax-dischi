@@ -79,11 +79,12 @@ html {
   padding: 0 10rem;
   background-color: var(--color-gray-dark);
   color: #fff;
+  padding-bottom: 5rem;
 }
 
 @media screen and (max-width: 1250px) {
   .container-content {
-    padding: 5rem 0;
+    padding: 0 0 5rem 0;
     display: flex;
     justify-content: center;
     flex-direction: row;
