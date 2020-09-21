@@ -10982,6 +10982,15 @@ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"
 
 
 $(document).ready(function () {
+  homepage(); //// cerca per autore
+
+  $(document).on("click", ".nav__artist-name", function () {
+    var artist = $(this).data('value');
+    filtraArtista(artist);
+  });
+}); //// chimata ajax per l'homepage
+
+function homepage() {
   $.ajax({
     url: "http://localhost:8888/lezione-4/cd/database/server.php",
     method: "GET",
@@ -10993,32 +11002,28 @@ $(document).ready(function () {
       $(".nav").hide();
       $(".error__page").show();
     }
-  }); /// funzione per filtrare per artista
-
-  function filtraArtista(name) {
-    $(".container-content").empty();
-    $.ajax({
-      url: "http://localhost:8888/lezione-4/cd/database/server.php",
-      method: "GET",
-      data: {
-        author: name
-      },
-      success: function success(data) {
-        compileCards(data);
-      },
-      error: function error() {
-        $(".nav").hide();
-        $(".error__page").show();
-      }
-    });
-  } //// cerca per autore
-
-
-  $(document).on("click", ".nav__artist-name", function () {
-    var artist = $(this).data('value');
-    filtraArtista(artist);
   });
-}); /// compile cards
+} /// chimata ajax per l'artista
+
+
+function filtraArtista(name) {
+  $(".container-content").empty();
+  $.ajax({
+    url: "http://localhost:8888/lezione-4/cd/database/server.php",
+    method: "GET",
+    data: {
+      author: name
+    },
+    success: function success(data) {
+      compileCards(data);
+    },
+    error: function error() {
+      $(".nav").hide();
+      $(".error__page").show();
+    }
+  });
+} /// compile cards
+
 
 function compileCards(dbAnswer) {
   var source = $("#container-cards").html();
