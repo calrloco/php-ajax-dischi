@@ -3,7 +3,7 @@ var $ = require("jquery");
 /// chiamata ajax
 $(document).ready(function() {
   $.ajax({
-    url: "http://localhost:8888/lezione-4/cd/database/db.php",
+    url: "http://localhost:8888/lezione-4/cd/database/server.php",
     method: "GET",
     success: function(data) {
       compileCards(data);

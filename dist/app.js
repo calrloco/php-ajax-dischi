@@ -10983,7 +10983,7 @@ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"
 
 $(document).ready(function () {
   $.ajax({
-    url: "http://localhost:8888/lezione-4/cd/database/db.php",
+    url: "http://localhost:8888/lezione-4/cd/database/server.php",
     method: "GET",
     success: function success(data) {
       compileCards(data);
