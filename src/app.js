@@ -7,7 +7,7 @@ $(document).ready(function() {
     method: "GET",
     success: function(data) {
       compileCards(data);
-      compileNav(data);
+      authorsNav(data);
     },
     error: function() {
       $('.nav').hide();
@@ -51,18 +51,24 @@ function compileCards(dbAnswer) {
     $(".container-content").append(htmlContext);
   }
 }
-/// compila lista artisti nav
-function compileNav(risp) {
-  var source = $("#container-artists").html();
-  var templateAuthor = Handlebars.compile(source);
-  for (var i = 0; i < risp.length; i++) {
-    var author = risp[i].author;
-    var context = {
-      artist: author,
-    };
-    var htmlContext = templateAuthor(context);
-    $(".nav__artist").append(htmlContext);
-  }
+/// compila lista artisti nav senza doppioni 
+function authorsNav (risp){
+      var authorsNav = [];
+      for(var i=0;i<risp.length;i++){
+          if(!authorsNav.includes(risp[i].author)){
+             authorsNav.push(risp[i].author);
+          }  
+      }
+      var source = $("#container-artists").html();
+      var templateAuthor = Handlebars.compile(source);
+      for (var i = 0; i < authorsNav.length; i++) {
+        var author = authorsNav[i];
+        var context = {
+          artist: author,
+        };
+        var htmlContext = templateAuthor(context);
+        $(".nav__artist").append(htmlContext);
+      }
 }
 
 

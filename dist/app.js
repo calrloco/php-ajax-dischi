@@ -10987,7 +10987,7 @@ $(document).ready(function () {
     method: "GET",
     success: function success(data) {
       compileCards(data);
-      compileNav(data);
+      authorsNav(data);
     },
     error: function error() {
       $('.nav').hide();
@@ -11032,15 +11032,23 @@ function compileCards(dbAnswer) {
     var htmlContext = templateCd(context);
     $(".container-content").append(htmlContext);
   }
-} /// compila lista artisti nav
+} /// compila lista artisti nav senza doppioni 
 
 
-function compileNav(risp) {
+function authorsNav(risp) {
+  var authorsNav = [];
+
+  for (var i = 0; i < risp.length; i++) {
+    if (!authorsNav.includes(risp[i].author)) {
+      authorsNav.push(risp[i].author);
+    }
+  }
+
   var source = $("#container-artists").html();
   var templateAuthor = Handlebars.compile(source);
 
-  for (var i = 0; i < risp.length; i++) {
-    var author = risp[i].author;
+  for (var i = 0; i < authorsNav.length; i++) {
+    var author = authorsNav[i];
     var context = {
       artist: author
     };
