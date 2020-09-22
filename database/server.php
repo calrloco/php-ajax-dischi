@@ -1,7 +1,8 @@
 <?php
 include 'db.php';
 richiestaDb($database);
-function encode($db){
+function encode($db)
+{
     header('Content-Type: application/json');
     echo json_encode($db);
 }
@@ -11,12 +12,12 @@ function richiestaDb($database){
     if (empty($_GET['author'])) {
         encode($database);
     } else {
+        $selectArtist = [];
         foreach ($database as $key) {
-            $selectArtist = [];
             if (in_array($_GET['author'], $key)) {
                 array_push($selectArtist, $key);
-                encode($selectArtist);
             }
         }
+        encode($selectArtist);
     }
 }

@@ -70,9 +70,9 @@ function authorsNav(risp) {
   var authorsNav = [];
   for (var i = 0; i < risp.length; i++) {
     if (!authorsNav.includes(risp[i].author)) {
-      authorsNav.push(risp[i].author);
-    }
-  }
+        authorsNav.push(risp[i].author);
+      }
+  }   
   var source = $("#container-artists").html();
   var templateAuthor = Handlebars.compile(source);
   for (var i = 0; i < authorsNav.length; i++) {
