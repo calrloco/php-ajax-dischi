@@ -8,7 +8,6 @@ function encode($db)
 }
 /// funzione per richesta db di autore
 function richiestaDb($database){
-    
     if (empty($_GET['author'])) {
         encode($database);
     } else {
